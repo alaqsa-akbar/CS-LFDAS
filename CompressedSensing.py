@@ -166,7 +166,8 @@ class CompressedSensing:
         """
         if self.reconstructed is None:
             raise ValueError("Call extract_low_freq() before plotting.")
-        plot_signal_3d(self.reconstructed, self.fs, title="Low-Frequency Signal")
+        plot_signal_3d(self.reconstructed, self.fs,
+                       title=f"CS Signal (alpha={self.alpha}, subsample_ratio={self.subsample_ratio})")
 
     def get_compressed_size(self) -> int:
         """
